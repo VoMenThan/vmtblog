@@ -31,49 +31,29 @@
 
                             <!--post meta start-->
                             <div class="post-meta m-bot-50">
-                                <div class="date">Feb 21, 2017</div>
-                                <h3>Best One page template ever. You'll really love it.</h3>
+                                <div class="date">{{ $blog->created_at->format('d/m/Y') }}</div>
+                                <h3>{{ $blog->Title }}</h3>
 
                                 <div class="category">
                                     <span><i class="fa fa-user"></i> <a href="#">Jhon Doe</a></span>
                                     <span><a href="#">Design</a></span>
                                     <span><a href="#">Styles</a></span>
-                                    <a href="#" class="pull-right blog-comments"> <i class="fa fa-comments-o"></i> 5
-                                        Comments</a>
+                                    <a href="#" class="pull-right blog-comments"> <i class="fa fa-comments-o"></i> 
+                                        {{$blog->comment->count()}} Bình luận
+                                    </a>
                                 </div>
                             </div>
                             <!--post meta end-->
 
                             <!--post image start-->
                             <div class="thumb zoom-img">
-                                <img src="img/parallax-2.jpg" alt=""/>
+                                <img src="img/{{ $blog->Image }}" alt=""/>
                             </div>
                             <!--post image end-->
 
                             <!--post description start-->
                             <div class="post-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias,
-                                    aliquid deserunt dolorum eligendi facilis illo officiis quam recusandae
-                                    reiciendis saepe similique temporibus? Commodi cumque exercitationem hic
-                                    ipsa ipsam nemo!</p>
-
-                                <p>
-                                    It is a long established fact that a reader will be distracted by the readable
-                                    content of a page when looking at its layout. The point of using Lorem Ipsum is that
-                                    it has a more-or-less normal distribution of letters, as opposed to using 'Content
-                                    here, content here', making it look like readable English. Many desktop publishing
-                                    packages and web page editors now use Lorem Ipsum as their default model text, and a
-                                    search for 'lorem ipsum' will uncover many web sites still in their infancy.
-                                </p>
-                                <blockquote>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                    roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
-                                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                                    looked up one of the more obscure Latin words, consectetur
-                                </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias,
-                                    aliquid deserunt dolorum eligendi facilis illo officiis quam recusandae
-                                    reiciendis saepe similique temporibus? Commodi cumque exercitationem hic
-                                    ipsa ipsam nemo!</p>
+                                {!! $blog->Content !!}
 
                             </div>
                             <!--post description end-->
@@ -91,7 +71,7 @@
                             <!--author short info start-->
                             <article class="author-wrapper">
                                 <div class="author_img">
-                                    <img alt="" class="img-responsive alignleft" src="img/author.jpg">
+                                    <img alt="" class="img-responsive alignleft" src="img/avatar-men-than.jpg">
                                 </div>
                                 <div class="author-info">
                                     <div class="title">
@@ -103,7 +83,7 @@
 
                                 <div class="post-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="read-more">View all posts</a>
+                                        <a href="#" class="read-more">Xem tất cả bài viết</a>
                                     </div>
                                     <div class="pull-right">
                                         <div class="social-links">
@@ -121,137 +101,44 @@
                             <!--author short info end-->
 
                             <!--comments start-->
-                            <h4 class="m-bot-50">This post has 6 comments</h4>
+                            <h4 class="m-bot-50">Bài này có {{$blog->comment->count()}} bình luận</h4>
                             <ul class="media-list comments-list  clearlist">
                                 <!-- Comment Item start-->
+                                @foreach($blog->comment as $cm)
                                 <li class="media">
                                     <a class="pull-left" href="#">
-                                        <img class="media-object comment-avatar" src="img/author-2.jpg" alt="" width="50" height="50">
+                                        <img class="media-object comment-avatar" src="img/avatar-men-than.jpg" alt="" width="50" height="50">
                                     </a>
 
                                     <div class="media-body">
                                         <div class="comment-info">
                                             <div class="comment-author">
-                                                <a href="#">John Doe</a>
+                                                <a href="#">{{$cm->user->name}}</a>
                                             </div>
-                                            Feb 23, 2017, at 1:12
-                                            <a href="#" class="comment-reply"><i class="fa fa-comment-o"></i>Reply</a>
-                                        </div>
-
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut
-                                            ante eleifend eleifend.
-                                        </p>
-
-                                        <!--  second level Comment start-->
-                                        <div class="media">
-                                            <a class="pull-left" href="#">
-                                                <img class="media-object comment-avatar" src="img/author.jpg" alt="" width="50" height="50">
-                                            </a>
-
-                                            <div class="media-body">
-
-                                                <div class="comment-info">
-                                                    <div class="comment-author">
-                                                        <a href="#">Mr Trone</a>
-                                                    </div>
-                                                    Feb 23, 2017, at 2:04
-                                                    <a href="#" class="comment-reply"><i class="fa fa-comment-o"></i>Reply</a>
-                                                </div>
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at
-                                                    magna ut ante eleifend eleifend.
-                                                </p>
-
-                                                <!-- third level Comment start -->
-                                                <div class="media">
-                                                    <a class="pull-left" href="#">
-                                                        <img class="media-object comment-avatar" src="img/author-2.jpg" alt="" width="50" height="50">
-                                                    </a>
-
-                                                    <div class="media-body">
-
-                                                        <div class="comment-info">
-                                                            <div class="comment-author">
-                                                                <a href="#">John Doe</a>
-                                                            </div>
-                                                            Feb 23, 2017, at 2:04
-                                                            <a href="#" class="comment-reply"><i
-                                                                    class="fa fa-comment-o"></i>Reply</a>
-                                                        </div>
-
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                            Quisque at magna ut ante eleifend eleifend.
-                                                        </p>
-
-                                                    </div>
-                                                </div>
-                                                <!-- third level Comment end -->
-                                            </div>
-                                        </div>
-                                        <!-- second level Comment end -->
-                                    </div>
-
-                                </li>
-                                <!-- End Comment Item -->
-
-                                <!-- Comment Item start-->
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object comment-avatar" src="img/author.jpg" alt="" width="50" height="50">
-                                    </a>
-
-                                    <div class="media-body">
-                                        <div class="comment-info">
-                                            <div class="comment-author">
-                                                <a href="#">John Doe</a>
-                                            </div>
-                                            Feb 23, 2017, at 2:04
-                                            <a href="#" class="comment-reply"><i class="fa fa-comment-o"></i>Reply</a>
+                                            {{$cm->created_at->format('d/m/Y H:i:s')}}
+                                            <a href="#" class="comment-reply"><i class="fa fa-comment-o"></i>Trả lời</a>
                                         </div>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut
-                                            ante eleifend eleifend.
+                                            {{$cm->Comment}}
                                         </p>
                                     </div>
                                 </li>
+                                @endforeach
                                 <!-- End Comment Item -->
 
-                                <!-- Comment Item start-->
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object comment-avatar" src="img/author-2.jpg" alt="" width="50" height="50">
-                                    </a>
-
-                                    <div class="media-body">
-
-                                        <div class="comment-info">
-                                            <div class="comment-author">
-                                                <a href="#">John Doe</a>
-                                            </div>
-                                            Feb 23, 2017, at 2:04
-                                            <a href="#" class="comment-reply"><i class="fa fa-comment-o"></i>Reply</a>
-                                        </div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at magna ut
-                                            ante eleifend eleifend.
-                                        </p>
-                                    </div>
-                                </li>
-                                <!-- End Comment Item -->
+                                
                             </ul>
                             <!--comments end-->
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h4>Leave a Reply</h4>
+                                    <h4>Để lại bình luận của bạn</h4>
                                     <br/>
                                 </div>
                                 <form class="reply-comments-form">
                                     <div class="col-md-4 form-group">
-                                        <label>Name*</label>
-                                        <input type="text" class="form-control" placeholder="Name" required="">
+                                        <label>Tên*</label>
+                                        <input type="text" class="form-control" placeholder="Tên" required="">
                                     </div>
                                     <div class="col-md-4 form-group">
                                         <label>Email*</label>
@@ -262,11 +149,11 @@
                                         <input type="text" class="form-control" placeholder="Website">
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <label>Comments*</label>
+                                        <label>Bình luận*</label>
                                         <textarea class="form-control" rows="5" name="comment"></textarea>
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <button type="submit" class="btn btn-post"> Post Comment</button>
+                                        <button type="submit" class="btn btn-post"> Đăng</button>
                                     </div>
 
                                 </form>
@@ -294,39 +181,25 @@
                         </ul>
                     </div>
                     <div class="widget">
-                        <h4>Popular Post</h4>
+                        <h4>Bài viết phổ biến</h4>
                         <ul class="widget-category widget-popular">
+                            @foreach($popular as $item)
                             <li>
-                                <div class="meta">FEB 21, 2017</div>
-                                <a href="#">Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    1500s,</a>
+                                <div class="meta">{{ $item->created_at->format('d-m-Y') }}</div>
+                                <a href="blog/{{ $item->NoTitle }}_{{$item->id}}.html">{{ $item->Title }}</a>
 
                                 <div class="meta">
-                                    <a href="#" class=""><i class="fa fa-comments-o"></i> 3 Comments</a>
+                                    <a href="blog/{{ $item->NoTitle }}_{{$item->id}}.html" class="">
+                                        <i class="fa fa-comments-o"></i> 3 Bình luận
+                                    </a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="meta">FEB 21, 2017</div>
-                                <a href="#">It is a long established fact that a reader will be distracted</a>
-
-                                <div class="meta">
-                                    <a href="#" class=""><i class="fa fa-comments-o"></i> 7 Comments</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="meta">FEB 21, 2017</div>
-                                <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                    roots</a>
-
-                                <div class="meta">
-                                    <a href="#" class=""><i class="fa fa-comments-o"></i> 4 Comments</a>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
 
                     <div class="widget">
-                        <h4>Tags</h4>
+                        <h4>Thẻ </h4>
                         <!--post tags start-->
                         <div class="post-tags">
                             <a href="#" title="">image</a>

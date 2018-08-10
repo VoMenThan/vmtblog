@@ -652,13 +652,13 @@ Trang Chủ
                             <a href="blog-single.html">
                                 <img src="img/portfolio_01.jpg" alt=""/>
 
-                                <div class="date">Feb 21, 2017</div>
+                                <div class="date">{{$highlights[0]->created_at->format('d/m/Y')}}</div>
                             </a>
 
                         </div>
                         <div class="post-meta">
 
-                            <h4><a href="blog-single.html">Best One page template ever</a></h4>
+                            <h4><a href="blog-single.html">{{$highlights[0]->Title}}</a></h4>
 
                             <div class="category">
                                 <span><a href="#">Design</a></span>
@@ -666,24 +666,26 @@ Trang Chủ
                             </div>
                         </div>
                     </div>
+
                     <div class="blog-post">
                         <div class="thumb zoom-img">
                             <a href="blog-single.html">
-                                <img src="img/portfolio_02.jpg" alt=""/>
+                                <img src="img/portfolio_06.jpg" alt=""/>
 
-                                <div class="date">Feb 21, 2017</div>
+                                <div class="date">{{$highlights[1]->created_at->format('d/m/Y')}}</div>
                             </a>
                         </div>
                         <div class="post-meta">
-                            <h4><a href="blog-single.html">Your dreams come true</a></h4>
+                            <h4><a href="blog-single.html">{{$highlights[1]->Title}}</a></h4>
 
                             <div class="category">
-                                <span><a href="#">Personal</a></span>
-                                <span><a href="#">Lifestyle</a></span>
+                                <span><a href="#">Corporate</a></span>
+                                <span><a href="#">Styles</a></span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 col-sm-4">
 
                     <div class="blog-post">
@@ -691,11 +693,11 @@ Trang Chủ
                             <a href="blog-single.html">
                                 <img src="img/portfolio_03.jpg" alt=""/>
 
-                                <div class="date">Feb 21, 2017</div>
+                                <div class="date">{{$highlights[2]->created_at->format('d/m/Y')}}</div>
                             </a>
                         </div>
                         <div class="post-meta">
-                            <h4><a href="blog-single.html">Build with Bootstrap 3+</a></h4>
+                            <h4><a href="blog-single.html">{{$highlights[2]->Title}}</a></h4>
 
                             <div class="category">
                                 <span><a href="#">Business</a></span>
@@ -712,11 +714,11 @@ Trang Chủ
                             <a href="blog-single.html">
                                 <img src="img/portfolio_06.jpg" alt=""/>
 
-                                <div class="date">Feb 21, 2017</div>
+                                <div class="date">{{$highlights[3]->created_at->format('d/m/Y')}}</div>
                             </a>
                         </div>
                         <div class="post-meta">
-                            <h4><a href="blog-single.html">Full Responsive, Support all devices</a></h4>
+                            <h4><a href="blog-single.html">{{$highlights[3]->Title}}</a></h4>
 
                             <div class="category">
                                 <span><a href="#">Corporate</a></span>
@@ -725,17 +727,18 @@ Trang Chủ
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 col-sm-4">
                     <div class="blog-post">
                         <div class="thumb zoom-img">
                             <a href="blog-single.html">
                                 <img src="img/portfolio_04.jpg" alt=""/>
 
-                                <div class="date">Feb 21, 2017</div>
+                                <div class="date">{{$highlights[4]->created_at->format('d/m/Y')}}</div>
                             </a>
                         </div>
                         <div class="post-meta">
-                            <h4><a href="blog-single.html">Clean codes. SCSS, Gulp Support</a></h4>
+                            <h4><a href="blog-single.html">{{$highlights[4]->Title}}</a></h4>
 
                             <div class="category">
                                 <span><a href="#">Design</a></span>
@@ -748,11 +751,11 @@ Trang Chủ
                             <a href="blog-single.html">
                                 <img src="img/portfolio_05.jpg" alt=""/>
 
-                                <div class="date">Feb 21, 2017</div>
+                                <div class="date">{{$highlights[5]->created_at->format('d/m/Y')}}</div>
                             </a>
                         </div>
                         <div class="post-meta">
-                            <h4><a href="blog-single.html">Free updates and supports</a></h4>
+                            <h4><a href="blog-single.html">{{$highlights[5]->Title}}</a></h4>
 
                             <div class="category">
                                 <span><a href="#">Fresh</a></span>

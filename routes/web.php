@@ -15,11 +15,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/trang-chu', function () {
-    return view('pages.home');
-});
+/*Route layout*/
+Route::get('/trang-chu', 'PagesController@getHomePage');
+Route::get('/blog/{NoName}_{id}.html', 'PagesController@getBlogDetail');
+/*Route layout*/
 
-Route::get('/chi-tiet', 'PagesController@getDetail');
+/*Route admin*/
+Route::group(['prefix' => 'admin'], function(){
+	Route::group(['prefix' => 'danh-muc'], function(){
+
+		Route::get('danh-sach', 'CategoryBlogController@getDanhSach');
+
+		Route::get('them', 'CategoryBlogController@getThem');
+		Route::post('them', 'CategoryBlogController@postThem');
+
+		Route::get('sua/{id}', 'CategoryBlogController@getSua');
+		Route::post('sua/{id}', 'CategoryBlogController@postSua');
+
+		Route::get('xoa/{id}', 'CategoryBlogController@getXoa');
+
+	});
+});
+/*Route admin*/
+
 
 Auth::routes();
 

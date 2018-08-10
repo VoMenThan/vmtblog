@@ -11,7 +11,7 @@ class CategoryBlogTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('CategoryBlog')->insert([
+        DB::table('categoryblog')->insert([
         	['Name' => 'Xã Hội','NoName' => 'Xa-Hoi'],
         	['Name' => 'Thế Giới','NoName' => 'The-Gioi'],
         	['Name' => 'Kinh Doanh','NoName' => 'Kinh-Doanh'],

@@ -18,15 +18,16 @@ class BlogTableSeeder extends Seeder
 		<p>Hiện tại hơn 50% tổng số người sử dụng Switch đều chơi game bằng cả hai cách, theo dữ liệu gửi về cho Nintendo. Điều này có nghĩa concept máy chơi game của người Nhật Bản đã được cộng đồng chấp nhận và sử dụng hàng ngày.</p>
 		<p>Chính sự độc đáo này khiến cho tiềm năng lâu dài của Switch trở nên vô cùng khả quan.</p>";
 
-        DB::table('Blog')->insert([
+        DB::table('blog')->insert([
         	[
-        		'idCategoryBlog'=>'1',
         		'Title' => 'Hơn 1 năm qua Nintendo Switch đã tự tạo ra một thị trường mới toanh như thế nào?',
         		'NoTitle' => 'hon-1-nam-qua-nintendo-switch-da-tu-tao-ra-mot-thi-truong-moi-toanh-nhu-the-nao',
         		'Excerpts' => 'Bên cạnh 400 suất học bổng Nguyễn Văn Đạo, ĐH FPT lần đầu tiên chọn ra 30 học sinh xuất sắc nhất để cấp học bổng toàn phần đào tạo từ cử nhân lên thẳng tiến sĩ, với tổng giá trị quỹ lên tới 5 triệu USD.',
         		'Content' => $NoiDung,
-        		'Image' => 'hero-1.jpg',
-        		'Highlights' => 1
+                'Image' => 'hero-1.jpg',
+                'Highlights' => 1,
+        		'View' => 0,
+                'idCategoryBlog'=>'1'
         	],
         	[
         		'idCategoryBlog'=>'1',
@@ -35,7 +36,9 @@ class BlogTableSeeder extends Seeder
         		'Excerpts' => 'Bên cạnh 400 suất học bổng Nguyễn Văn Đạo, ĐH FPT lần đầu tiên chọn ra 30 học sinh xuất sắc nhất để cấp học bổng toàn phần đào tạo từ cử nhân lên thẳng tiến sĩ, với tổng giá trị quỹ lên tới 5 triệu USD.',
         		'Content' => $NoiDung,
         		'Image' => 'hero-1.jpg',
-        		'Highlights' => 1
+                'Highlights' => 1,
+                'View' => 0,
+                'idCategoryBlog'=>'1'
         	],
         	[
         		'idCategoryBlog'=>'1',
@@ -44,7 +47,9 @@ class BlogTableSeeder extends Seeder
         		'Excerpts' => 'Bên cạnh 400 suất học bổng Nguyễn Văn Đạo, ĐH FPT lần đầu tiên chọn ra 30 học sinh xuất sắc nhất để cấp học bổng toàn phần đào tạo từ cử nhân lên thẳng tiến sĩ, với tổng giá trị quỹ lên tới 5 triệu USD.',
         		'Content' => $NoiDung,
         		'Image' => 'hero-1.jpg',
-        		'Highlights' => 1
+        		'Highlights' => 1,
+                'View' => 0,
+                'idCategoryBlog'=>'1'
         	],
         	[
         		'idCategoryBlog'=>'2',
@@ -53,7 +58,9 @@ class BlogTableSeeder extends Seeder
         		'Excerpts' => 'Bên cạnh 400 suất học bổng Nguyễn Văn Đạo, ĐH FPT lần đầu tiên chọn ra 30 học sinh xuất sắc nhất để cấp học bổng toàn phần đào tạo từ cử nhân lên thẳng tiến sĩ, với tổng giá trị quỹ lên tới 5 triệu USD.',
         		'Content' => $NoiDung,
         		'Image' => 'hero-1.jpg',
-        		'Highlights' => 1
+        		'Highlights' => 1,
+                'View' => 0,
+                'idCategoryBlog'=>'1'
         	],
         	[
         		'idCategoryBlog'=>'3',
@@ -62,7 +69,9 @@ class BlogTableSeeder extends Seeder
         		'Excerpts' => 'Bên cạnh 400 suất học bổng Nguyễn Văn Đạo, ĐH FPT lần đầu tiên chọn ra 30 học sinh xuất sắc nhất để cấp học bổng toàn phần đào tạo từ cử nhân lên thẳng tiến sĩ, với tổng giá trị quỹ lên tới 5 triệu USD.',
         		'Content' => $NoiDung,
         		'Image' => 'hero-1.jpg',
-        		'Highlights' => 1
+        		'Highlights' => 1,
+                'View' => 0,
+                'idCategoryBlog'=>'1'
         	]
 
     	]);
